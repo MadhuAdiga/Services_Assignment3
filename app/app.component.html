@@ -1,0 +1,12 @@
+<h2>Services</h2><br><br>
+<div class="row" >
+    <div class="col-lg-7" *ngFor="let task of TaskList">
+        <button [routerLink]="['/task',selectedID]" routerLinkActive="active" class="btn btn-success btn-block" (click)="update(task.id)">{{task.time}}</button>
+    </div>
+</div><br><br>
+
+<router-outlet></router-outlet>
+<task [child_ID]="selectedID"></task>
+
+
+
